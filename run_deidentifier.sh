@@ -15,12 +15,12 @@ docker run \
   /data/input.csv \
   /data/output.csv \
   /data/output_review.csv \
-  $DEVICE
+  $DEVICE   
 
 # Remove temporary files
-rm deidentification_details_for_review.csv
-rm reports.npy
-rm reports_deidentified.npy
-rm deidentification_details_for_review_reports.npy
-rm deidentification_details_for_review_labeled_reports.npy
-rm deidentification_details_for_review_phi_lengths.npy
+rm -f deidentification_details_for_review.csv
+rm -f reports.npy
+rm -f reports_deidentified.npy
+rm -f deidentification_details_for_review_reports.npy
+rm -f deidentification_details_for_review_labeled_reports.npy
+rm -f deidentification_details_for_review_phi_lengths.npy
