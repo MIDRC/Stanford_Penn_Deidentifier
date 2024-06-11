@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Parse input arguments
-INPUT_PATH=$1
-OUTPUT_PATH=$2
-OUTPUT_REVIEWS_PATH=$3
+INPUT_PATH=/data/input.csv
+OUTPUT_PATH=/data/output.csv
+OUTPUT_REVIEWS_PATH=/data/output_review.csv
 DEVICE=$4
 
 # Convert CSV to numpy array
