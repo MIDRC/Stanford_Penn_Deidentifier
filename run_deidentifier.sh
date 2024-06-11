@@ -10,7 +10,16 @@ DEVICE=$4
 docker build -t deidentifier .
 
 # Run the Docker container with the specified arguments
-docker run -v $(pwd):/usr/src/app/Stanford_Penn_MIDRC_Deidentifier deidentifier $INPUT_PATH $OUTPUT_PATH $OUTPUT_REVIEWS_PATH $DEVICE
+# docker run -v $(pwd):/usr/src/app/Stanford_Penn_MIDRC_Deidentifier deidentifier $INPUT_PATH $OUTPUT_PATH $OUTPUT_REVIEWS_PATH $DEVICE
+
+docker run \
+  -v $(pwd):/usr/src/app/Stanford_Penn_MIDRC_Deidentifier deidentifier \
+  -v $INPUT_PATH:/usr/src/app/Stanford_Penn_MIDRC_Deidentifier/input.csv \
+  -v $OUTPUT_PATH:/usr/src/app/Stanford_Penn_MIDRC_Deidentifier/output.csv \
+  -v $OUTPUT_REVIEWS_PATH:/usr/src/app/Stanford_Penn_MIDRC_Deidentifier/output_reviews.csv \
+  deidentifier /usr/src/app/Stanford_Penn_MIDRC_Deidentifier/input.csv /usr/src/app/Stanford_Penn_MIDRC_Deidentifier/output.csv /usr/src/app/Stanford_Penn_MIDRC_Deidentifier/output_reviews.csv $DEVICE
+
+
 
 # Remove temporary files
 rm deidentification_details_for_review.csv

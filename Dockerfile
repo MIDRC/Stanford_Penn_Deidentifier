@@ -9,11 +9,6 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# Clone the GitHub repo
-# RUN git clone https://github.com/MIDRC/Stanford_Penn_MIDRC_Deidentifier.git
-RUN git clone --branch dockerize https://github.com/juliannicolas90/Stanford_Penn_MIDRC_Deidentifier.git
-
-
 # Change directory to the cloned repo
 WORKDIR /usr/src/app/Stanford_Penn_MIDRC_Deidentifier
 
