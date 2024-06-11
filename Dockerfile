@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 
 # Clone the GitHub repo
 # RUN git clone https://github.com/MIDRC/Stanford_Penn_Deidentifier.git
-RUN git clone --branch juliannicolas90:dockerize https://github.com/MIDRC/Stanford_Penn_Deidentifier.git
+RUN git clone --branch dockerize https://github.com/juliannicolas90/Stanford_Penn_Deidentifier.git
 
 
 # Change directory to the cloned repo
