@@ -10,7 +10,7 @@ DEVICE=$4
 docker build -t deidentifier .
 
 # Run the Docker container with the specified arguments
-docker run -v $(pwd):/usr/src/app/Stanford_Penn_Deidentifier deidentifier $INPUT_PATH $OUTPUT_PATH $OUTPUT_REVIEWS_PATH $DEVICE
+docker run -v $(pwd):/usr/src/app/Stanford_Penn_MIDRC_Deidentifier deidentifier $INPUT_PATH $OUTPUT_PATH $OUTPUT_REVIEWS_PATH $DEVICE
 
 # Remove temporary files
 rm deidentification_details_for_review.csv
